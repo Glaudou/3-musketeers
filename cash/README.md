@@ -6,18 +6,18 @@
 
 1) Go to your folder where your files lie using the shell command
 ```sh
-â¯ cd /path/to/worskpace/3-musketeers/cash
+> cd /path/to/worskpace/3-musketeers/cash
 ```
 
 2) Install all the dependencies needed in the local folder using the command
 ```sh
-â¯ npm i
+> npm i
 ```
 
 ## II) Usage
 
 ```sh
-â¯ node bin/index.js
+> node bin/index.js
 ```
 
 ```js
