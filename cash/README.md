@@ -14,7 +14,7 @@
 â¯ npm i
 ```
 
-## III) Usage
+## II) Usage
 
 ```sh
 â¯ node bin/index.js
