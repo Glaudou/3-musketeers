@@ -16,29 +16,9 @@
 
 ## II) Usage
 
-```sh
-> node bin/index.js
-```
 
 ```js
-const Conf = require('conf');
-const meow = require('meow');
-const chalk = require('chalk');
-const cash = require('./cash.js');
-
-const config = new Conf();
-const argv = process.argv.slice(2);
-
-const {DEFAULT_TO_CURRENCIES} = require('./constants');
-
-const cli = meow(`
-	Usage
-		$ cash <amount> <from> <to>
-		$ cash <options>
-	Options
-		--set -s 			Set default currencies
-	Examples
-		$ cash 10 usd eur pln
-		$ cash --set usd aud
-`);
+const baseCurrency = cash.from();
+const newCurrency = cash.to();
+const baseCurrencyAmount = cash.amount;
 ```
