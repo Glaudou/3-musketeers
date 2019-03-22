@@ -6,26 +6,33 @@ describe('starwars-names', () => {
     test('should be a fulfilled array', () => {
       expect(starWars.all).toHaveLength(starWarsNames.length)
     });
+	
     test('should be an array of strings', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+		const isString = str => typeof str === 'string'
+      expect(starWars.all).toSatisfyAll(isString)
     });
 
     test('should contain `Luke Skywalker`', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.all).toContain('Luke Skywalker')
     });
 
     test('should not contain `Ben Quadinaros`', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+      expect(starWars.all).not.toContain('Ben Quadinaros')
     });
   });
+  
 
   describe('random', () => {
     test('should return a random item from the starWars.all', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+		const randomTitle = starWars.random()
+      expect(starWars.all).toContain(randomTitle)
     });
 
     test('should return an array of random items if passed a number', () => {
-      throw new Error('test not yet defined... remove the throw and write your test here');
+		const nomber = 4
+		const array = starWars.random(nomber)
+		expect(array).toHaveLength(nomber)
+      expect(starWars.all).allMembers(array)
     });
   });
 });
